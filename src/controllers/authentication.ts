@@ -1,6 +1,7 @@
 import express from 'express';
-import {getUserByEmail, createUser} from '../db/users';
-import {random, authentication} from '../helpers';
+
+import { getUserByEmail, createUser } from '../db/users';
+import { authentication, random } from '../helpers';
 
 export const login = async (req: express.Request, res: express.Response) => {
   try {
@@ -27,7 +28,7 @@ export const login = async (req: express.Request, res: express.Response) => {
 
     await user.save();
 
-    res.cookie('ANTONIO-AUTH', user.authentication.sessionToken, { domain: 'localhost', path: '/' });
+    res.cookie('ASISH-AUTH', user.authentication.sessionToken, { domain: 'localhost', path: '/' });
 
     return res.status(200).json(user).end();
   } catch (error) {
@@ -36,7 +37,6 @@ export const login = async (req: express.Request, res: express.Response) => {
   }
 };
 
-// Start from here for debugging 21.53 for youtube video
 export const register = async (req: express.Request, res: express.Response) => {
   try {
     const { email, password, username } = req.body;
@@ -62,9 +62,7 @@ export const register = async (req: express.Request, res: express.Response) => {
     });
 
     return res.status(200).json(user).end();
-  } 
-  
-  catch (error) {
+  } catch (error) {
     console.log(error);
     return res.sendStatus(400);
   }
