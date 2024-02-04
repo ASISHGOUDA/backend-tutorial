@@ -7,6 +7,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 import router from './router';
+
 const app = express();
 
 app.use(cors({
@@ -22,7 +23,7 @@ app.use(bodyParser.json());
 const server = http.createServer(app);
 
 server.listen(8080, () => {
-  console.log('server running on http://localhost:8080');
+  console.log('server running on http://localhost:8080/');
 });
 
 const MONGO_URL = 'mongodb+srv://Asishkumar:Asishkumar@cluster0.rjyehsq.mongodb.net/?retryWrites=true&w=majority';
@@ -30,8 +31,8 @@ const MONGO_URL = 'mongodb+srv://Asishkumar:Asishkumar@cluster0.rjyehsq.mongodb.
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
 mongoose.connection.on('error', (error: Error) => console.log(error));
-mongoose.connection.on('open', () => {
-  console.log('Connected to MongoDB successfully!');
-});
+// mongoose.connection.on('open', () => {
+//   console.log('Connected to MongoDB successfully!');
+// });
 
 app.use('/', router());
