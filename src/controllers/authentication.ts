@@ -7,9 +7,9 @@ import {createUser} from '../db/users';
 
 export const register = async (req: express.Request, res: express.Response) => {
   try {
-    const {email, username, password} = req.body;
+    const { email, password, username } = req.body;
 
-    if (!email || !username || !password) {
+    if (!email || !password || !username) {
       return res.sendStatus(400);
     }
     
