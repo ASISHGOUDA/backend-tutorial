@@ -1,6 +1,11 @@
 # Building A REST API With Node, Express, TypeScript & MongoDB
 
+
 This is a repository for a REST API tutorial using Node, Express, TypeScript & MongoDB.
+
+https://github.com/ASISHGOUDA/backend-tutorial/assets/94213250/5544bc83-02eb-448a-b72d-51b0bfa24de0
+
+
 
 [Medium Links](URL-to-the-video)
 
