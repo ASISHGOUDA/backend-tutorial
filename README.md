@@ -5,9 +5,9 @@ This is a repository for a REST API using Node, Express, TypeScript & MongoDB.
 
 https://github.com/ASISHGOUDA/backend-tutorial/assets/94213250/5544bc83-02eb-448a-b72d-51b0bfa24de0
 
+![image](https://github.com/ASISHGOUDA/backend-tutorial/assets/94213250/19fbcc1a-e6bc-43d2-a209-abe467626b10)
 
-
-[Medium Links](URL-to-the-video)
+[View-Jam-File](https://www.figma.com/file/2YYa4zPDcyn9zIWf42RPnY/REST-API-Architecture-Asish)
 
 ## Features:
 
